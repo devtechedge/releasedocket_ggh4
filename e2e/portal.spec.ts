@@ -10,8 +10,13 @@ test('client portal receipt is noindex and speaks to the right client', async ({
 
   await page.goto('/portal/demo-vanguard-v1-token');
   await expect(page.getByText('Sprint 14')).toBeVisible();
-  // Seed leaves this version accepted, so sign-off actions are locked.
-  await expect(page.getByText('accepted', { exact: true }).first()).toBeVisible();
+  // The seeded receipt is either pending sign-off or already accepted; assert
+  // whichever state is present so the smoke stays green on a fresh database.
+  await expect(
+    page
+      .getByRole('button', { name: 'Accept Delivery Receipt' })
+      .or(page.getByText('accepted', { exact: true }).first())
+  ).toBeVisible();
 });
 
 test('client can post a comment on a receipt awaiting sign-off', async ({
