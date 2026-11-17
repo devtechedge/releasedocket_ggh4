@@ -1,0 +1,21 @@
+{
+  "action": "completed",
+  "installation": { "id": 990011 },
+  "repository": {
+    "id": 771001,
+    "full_name": "northstar-studio/vanguard-dispatch",
+    "default_branch": "main",
+    "private": true,
+    "html_url": "https://github.com/northstar-studio/vanguard-dispatch"
+  },
+  "check_run": {
+    "id": 55443322,
+    "name": "ci / unit-and-contract-tests",
+    "head_sha": "a1b2c3d4e5f60000111122223333444455556666",
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-04-12T10:16:00Z",
+    "completed_at": "2026-04-12T10:18:30Z",
+    "html_url": "https://github.com/northstar-studio/vanguard-dispatch/actions/runs/55443322"
+  }
+}
