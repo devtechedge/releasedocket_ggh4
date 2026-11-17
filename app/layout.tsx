@@ -27,6 +27,9 @@ export const metadata: Metadata = {
   title: 'ReleaseDocket — Verifiable Delivery Receipts for Software Agencies',
   description:
     'Delivery receipt, engineering evidence verification, and client acceptance platform for boutique software and AI-automation agencies.',
+  icons: {
+    icon: '/favicon.svg',
+  },
   openGraph: {
     title: 'ReleaseDocket — Verifiable Delivery Receipts for Software Agencies',
     description:

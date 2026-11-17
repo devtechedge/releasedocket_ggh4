@@ -45,7 +45,10 @@ export const DEMO_PORTAL_TOKEN_HELIOS_CHANGES = 'demo-helios-v1-token';
 export const DEMO_PORTAL_TOKEN_TREASURY_ACCEPTED = 'demo-treasury-v1-token';
 
 export async function ensureDemoSeeded(db: DbExecutor): Promise<void> {
-  if (process.env.NODE_ENV === 'production') {
+  if (
+    process.env.NODE_ENV === 'production' &&
+    process.env.ALLOW_DEMO_MODE !== 'true'
+  ) {
     return;
   }
 

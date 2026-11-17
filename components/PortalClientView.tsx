@@ -18,6 +18,7 @@ import {
 import type { CanonicalReceiptSnapshot } from '@/domain/types';
 import { formatUtcDate, formatUtcDateTime } from '@/lib/format';
 import type { PortalReceiptPayload } from '@/services/portal.service';
+import ThemeToggle from './ThemeToggle';
 
 export default function PortalClientView({
   token,
@@ -191,6 +192,7 @@ export default function PortalClientView({
             </div>
           </div>
           <div className="flex items-center gap-3">
+            <ThemeToggle />
             <ReceiptStateBadge state={payload.status} />
           </div>
         </div>

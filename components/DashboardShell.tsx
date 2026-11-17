@@ -18,6 +18,7 @@ import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { useState } from 'react';
 import type { Role } from '@/domain/types';
+import ThemeToggle from './ThemeToggle';
 
 export interface ShellSessionContext {
   user: { id: string; name: string; email: string };
@@ -223,6 +224,7 @@ export default function DashboardShell({
           </div>
 
           <div className="flex items-center gap-3 shrink-0">
+            <ThemeToggle />
             {primaryAction}
           </div>
         </header>

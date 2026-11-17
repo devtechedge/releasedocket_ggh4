@@ -14,6 +14,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { calculateMrrArithmetic, PLAN_CATALOG } from '@/domain/billing';
 import { formatUsdNumber } from '@/lib/format';
+import ThemeToggle from './ThemeToggle';
 
 export default function MarketingLanding({
   demoAllowed,
@@ -89,6 +90,7 @@ export default function MarketingLanding({
           </nav>
 
           <div className="flex items-center gap-3 shrink-0">
+            <ThemeToggle />
             <Link
               href={isAuthenticated ? '/dashboard' : '/auth/signin'}
               className="rounded-md bg-blue-800 px-4 py-2 text-sm font-medium text-white hover:bg-blue-900 transition-colors whitespace-nowrap shrink-0"

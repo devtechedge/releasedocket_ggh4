@@ -39,10 +39,10 @@ export const SESSION_COOKIE_NAME = 'rd_session';
 const loginAttempts = new Map<string, number[]>();
 
 export function isDemoModeAllowed(): boolean {
-  return (
-    process.env.NODE_ENV !== 'production' &&
-    process.env.ALLOW_DEMO_MODE !== 'false'
-  );
+  const allow = process.env.ALLOW_DEMO_MODE;
+  if (allow === 'false') return false;
+  if (allow === 'true') return true;
+  return process.env.NODE_ENV !== 'production';
 }
 
 export function checkAuthRateLimit(key: string, maxAttempts = 12): void {
