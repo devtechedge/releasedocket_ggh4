@@ -1,0 +1,6 @@
+{
+  "name": "ReleaseDocket",
+  "description": "Delivery receipt, engineering evidence verification, and client acceptance platform for boutique software and AI-automation agencies.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
